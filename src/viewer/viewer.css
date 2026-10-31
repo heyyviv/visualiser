@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; overflow: hidden; background: #111318; color: #d8dde6; font: 14px/1.4 system-ui, sans-serif; }
+#stage { position: fixed; inset: 0 320px 0 0; }
+#stage canvas { display: block; }
+#panel { position: fixed; top: 0; right: 0; bottom: 0; width: 320px; overflow-y: auto; padding: 14px 16px; background: #181b22; border-left: 1px solid #262b35; }
+#panel h1 { font-size: 18px; margin: 0 0 10px; }
+#panel section { border-top: 1px solid #262b35; padding: 10px 0; }
+.row { display: flex; gap: 8px; align-items: center; justify-content: space-between; margin: 4px 0; }
+.slider { display: block; margin: 6px 0; }
+.slider span { float: right; color: #8b95a7; font-variant-numeric: tabular-nums; }
+input[type=range] { width: 100%; accent-color: #4f8ef7; }
+.row input[type=range] { width: 120px; }
+button, select { background: #252a35; color: #d8dde6; border: 1px solid #343b49; border-radius: 6px; padding: 5px 10px; font: inherit; cursor: pointer; }
+button:hover { background: #2f3644; }
+button.on { background: #4f8ef7; color: #fff; }
+#stl { width: 100%; margin-top: 8px; }
+#err { background: #4a1820; border: 1px solid #e05d6f; color: #ffd5da; padding: 8px 10px; border-radius: 6px; white-space: pre-wrap; font: 12px/1.4 ui-monospace, monospace; margin-bottom: 10px; }
+#list a { display: block; padding: 6px 0; color: #7fb0ff; text-decoration: none; border-bottom: 1px solid #262b35; }
+#stepText { margin: 6px 0 8px; color: #b8c0cc; min-height: 3em; }
+#stepNum { color: #8b95a7; font-size: 12px; }
+.hint { color: #6b7485; font-size: 12px; }
+#toggle { display: none; position: fixed; top: 10px; right: 10px; z-index: 3; }
+.lbl { background: rgba(20,23,30,.85); border: 1px solid #3a4252; color: #e8ecf2; padding: 2px 7px; border-radius: 4px; font-size: 12px; white-space: nowrap; pointer-events: none; }
+.t3d { color: #fff; font-weight: 700; text-shadow: 0 2px 8px #000; white-space: nowrap; pointer-events: none; }
+.rowlbl { color: #cfd6e2; font: 12px ui-monospace, monospace; pointer-events: none; }
+@media (max-width: 700px) {
+  #stage { right: 0; }
+  #toggle { display: block; }
+  #panel { width: min(320px, 88vw); z-index: 2; transform: translateX(100%); transition: transform .2s; padding-top: 50px; }
+  body.open #panel { transform: none; }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "forge3d-mcp",
+  "version": "0.1.0",
+  "description": "Composable 3D part library for Claude: printable models and how-it-works explainers",
+  "type": "module",
+  "bin": {
+    "forge3d-mcp": "src/mcp.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "mcp": "node src/mcp.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "manifold-3d": "3.5.4",
+    "three": "0.186.1",
+    "zod": "4.6.7"
+  },
+  "license": "MIT",
+  "files": [
+    "src",
+    ".claude-plugin",
+    "skills",
+    "commands",
+    "README.md"
+  ]
+}

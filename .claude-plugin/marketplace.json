@@ -1,0 +1,14 @@
+{
+  "name": "forge3d",
+  "owner": {
+    "name": "vivekdas"
+  },
+  "description": "forge3d: 3D printable parts and animated 3D explainers for Claude",
+  "plugins": [
+    {
+      "name": "forge3d",
+      "source": "./",
+      "description": "Printable 3D models and step-by-step animated 3D explainers from short scripts over a part library."
+    }
+  ]
+}

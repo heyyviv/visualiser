@@ -1,0 +1,14 @@
+{
+  "name": "forge3d",
+  "version": "0.1.0",
+  "description": "Printable 3D models and step-by-step animated 3D explainers from short scripts over a part library (Manifold, STL export, live viewer).",
+  "author": { "name": "vivekdas" },
+  "license": "MIT",
+  "keywords": ["3d", "3d-printing", "cad", "stl", "explainer", "mcp"],
+  "mcpServers": {
+    "forge3d": {
+      "command": "sh",
+      "args": ["-c", "cd \"${CLAUDE_PLUGIN_ROOT}\" && { [ -d node_modules ] || npm ci --omit=dev --silent >&2; } && exec node src/mcp.js"]
+    }
+  }
+}

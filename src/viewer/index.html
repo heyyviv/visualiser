@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>forge3d viewer</title>
+<link rel="stylesheet" href="viewer.css">
+<script type="importmap">
+{ "imports": {
+  "manifold-3d": "/vendor/manifold/manifold.js",
+  "three": "/vendor/three/build/three.module.js",
+  "three/addons/": "/vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<div id="stage"></div>
+<button id="toggle" aria-label="Toggle panel">☰</button>
+<aside id="panel">
+  <h1 id="title">forge3d</h1>
+  <div id="err" hidden></div>
+  <div id="list" hidden></div>
+  <div id="controls" hidden>
+    <section id="steps" hidden>
+      <div class="row"><b id="stepTitle"></b><span id="stepNum"></span></div>
+      <p id="stepText"></p>
+      <div class="row">
+        <button id="prev">◀ Prev</button>
+        <button id="auto">Autoplay</button>
+        <button id="next">Next ▶</button>
+      </div>
+    </section>
+    <section id="params"></section>
+    <section>
+      <div class="row"><button id="play">▶ Play</button><label>speed <input id="speed" type="range" min="0" max="3" step="0.1" value="1"></label></div>
+      <label class="slider">explode <input id="explode" type="range" min="0" max="1" step="0.01" value="0"></label>
+      <div class="row">
+        <label><input id="section" type="checkbox"> section</label>
+        <select id="axis"><option>x</option><option selected>y</option><option>z</option></select>
+      </div>
+      <input id="cut" type="range" min="0" max="1" step="0.005" value="0.5">
+    </section>
+    <button id="stl">Download STL</button>
+    <p class="hint">drag: orbit · right-drag: pan · wheel: zoom · ←/→: steps</p>
+  </div>
+</aside>
+<script type="module" src="viewer.js"></script>
+</body>
+</html>
